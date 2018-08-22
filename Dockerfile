@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Somebody <somebody@acme.com>
+#MAINTAINER Somebody <somebody@acme.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 RUN apt-get update
@@ -14,11 +14,11 @@ RUN apt-get install -y --force-yes --no-install-recommends openjdk-8-jre r-base-
 #cytoscape_3_3.json
 #openjre8.json
 #--
-add http://chianti.ucsd.edu/cytoscape-3.3.0/cytoscape-3.3.0.tar.gz /deps/cytoscape-3.3.0.tar.gz
-add lib/cytoscape_3_3/cytoscape.desktop /usr/share/applications/cytoscape.desktop
+#add http://chianti.ucsd.edu/cytoscape-3.3.0/cytoscape-3.3.0.tar.gz /deps/cytoscape-3.3.0.tar.gz
+#add lib/cytoscape_3_3/cytoscape.desktop /usr/share/applications/cytoscape.desktop
 #--
-add lib/cytoscape_3_3/cytoscape_setup.sh /692a2894-fffa-468f-b746-b179f3dc4324
-add lib/cynetwork_bma/CyNetworkBMA-1.0.0_1.jar /deps/cytoscape-unix-3.3.0/apps/CyNetworkBMA-1.0.0_1.jar
+#add lib/cytoscape_3_3/cytoscape_setup.sh /692a2894-fffa-468f-b746-b179f3dc4324
+#add lib/cynetwork_bma/CyNetworkBMA-1.0.0_1.jar /deps/cytoscape-unix-3.3.0/apps/CyNetworkBMA-1.0.0_1.jar
 #--
 #r.json
 #r_dev.json
@@ -27,7 +27,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 #--
 #novnc.json
 #broker_base.json
-RUN pip install librabbitmq mongoengine 
+#RUN pip install librabbitmq mongoengine 
 copy lib/broker_base/broker.tar.gz /
 #--
 add lib/broker_base/init.sh /310b8ae5-cf5e-4aaf-b8e8-6cf2657dec93
