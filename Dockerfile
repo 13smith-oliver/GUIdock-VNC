@@ -27,7 +27,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 #--
 #novnc.json
 #broker_base.json
-#RUN pip install librabbitmq mongoengine 
+RUN pip install librabbitmq
+RUN pip install mongoengine 
 copy lib/broker_base/broker.tar.gz /
 #--
 add lib/broker_base/init.sh /310b8ae5-cf5e-4aaf-b8e8-6cf2657dec93
